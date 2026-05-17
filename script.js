@@ -46,26 +46,6 @@
     });
   }
 
-  /* ——— Progress bar animation (hero dashboard mockup) ——— */
-  const progressFill = document.getElementById('progress-fill');
-
-  if (progressFill && 'IntersectionObserver' in window) {
-    const progressObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            setTimeout(function () {
-              progressFill.classList.add('animated');
-            }, 700);
-            progressObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-    progressObserver.observe(progressFill);
-  }
-
   /* ——— Smooth-scroll for anchor links ——— */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
@@ -102,9 +82,11 @@
 
   /* Apply stagger to grids once they are observed */
   const grids = [
-    { sel: '.problem-grid',       child: '.problem-card',      base: 0 },
-    { sel: '.benefits-grid',      child: '.benefit-card',      base: 0 },
-    { sel: '.testimonials-grid',  child: '.testimonial-card',  base: 0 },
+    { sel: '.problem-grid',          child: '.problem-card',     base: 0 },
+    { sel: '.benefits-grid',         child: '.benefit-card',     base: 0 },
+    { sel: '.testimonials-grid',     child: '.testimonial-card', base: 0 },
+    { sel: '.delivery-outcomes',     child: '.outcome-card',     base: 0 },
+    { sel: '.screenshot-feature-list', child: '.screenshot-feature', base: 0 },
   ];
 
   grids.forEach(function (g) {
