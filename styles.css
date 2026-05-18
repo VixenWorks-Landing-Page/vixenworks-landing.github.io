@@ -1428,6 +1428,120 @@ ul { list-style: none; }
 }
 .benefit-card:hover .benefit-thumb img { opacity: 0.78; }
 
+/* ——— Hero Credibility Line ——— */
+.hero-credibility {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 28px;
+  max-width: 420px;
+}
+
+/* ——— Why Now Section ——— */
+.why-now-followup {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-top: -8px;
+}
+.why-now-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 720px;
+  margin: 52px auto 0;
+}
+.why-now-col {
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  border: 1px solid var(--border);
+}
+.why-now-col--old {
+  background: rgba(255, 255, 255, 0.02);
+}
+.why-now-col--new {
+  background: rgba(124, 58, 237, 0.07);
+  border-color: rgba(124, 58, 237, 0.25);
+}
+.why-now-col-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: var(--text-muted);
+}
+.why-now-col--new .why-now-col-label {
+  color: var(--accent);
+}
+.why-now-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.why-now-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 450;
+}
+.why-now-col--old .why-now-list li svg {
+  color: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+.why-now-col--new .why-now-list li svg {
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+/* ——— Urgency Band ——— */
+.urgency-band {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.12) 0%, rgba(124, 58, 237, 0.04) 100%);
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+  padding: 80px 28px;
+  text-align: center;
+}
+.urgency-band-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.urgency-band-content h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+}
+.urgency-band-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.urgency-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 32px !important;
+  font-style: italic;
+}
+
+/* ——— Final CTA Supporting Line ——— */
+.final-cta-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-style: italic;
+  margin-top: -28px;
+  margin-bottom: 36px !important;
+}
+
 /* ——— Pricing Thumbnail Strip ——— */
 .pricing-thumb-strip {
   max-width: 520px;
@@ -1510,6 +1624,9 @@ ul { list-style: none; }
 }
 
 @media (max-width: 700px) {
+  .why-now-grid { grid-template-columns: 1fr; }
+  .urgency-band { padding: 64px 20px; }
+
   .section { padding: 80px 20px; }
   .hero    { padding: 108px 20px 72px; }
 
